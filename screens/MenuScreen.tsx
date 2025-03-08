@@ -14,21 +14,21 @@ const menuItems: FoodItem[] = [
     {
         id: '1',
         name: 'Margherita Pizza',
-        image: 'https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg',
+        image: 'https://www.themealdb.com/images/media/meals/x0lk931587671540.jpg',
         price: '$12.99',
         description: 'Classic cheese pizza with fresh basil.'
     },
     {
         id: '2',
         name: 'Cheeseburger',
-        image: 'https://www.themealdb.com/images/media/meals/58oia61564916529.jpg',
+        image: 'https://www.themealdb.com/images/media/meals/k420tj1585565244.jpg',
         price: '$8.99',
         description: 'Juicy beef burger with cheddar cheese.'
     },
     {
         id: '3',
         name: 'Spaghetti Carbonara',
-        image: 'https://www.themealdb.com/images/media/meals/wtsvxx1511296896.jpg',
+        image: 'https://www.themealdb.com/images/media/meals/llcbn01574260722.jpg',
         price: '$10.99',
         description: 'Creamy pasta with pancetta and egg.'
     },
