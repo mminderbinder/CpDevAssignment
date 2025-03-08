@@ -27,8 +27,8 @@ const styles = StyleSheet.create({
     },
 
     logoContainer: {
-        width: 150,
-        height: 150,
+        width: 120,
+        height: 120,
         borderRadius: 60,
         overflow: 'hidden',
         marginBottom: 20,
