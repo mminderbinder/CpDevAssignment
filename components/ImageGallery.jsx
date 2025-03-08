@@ -10,32 +10,27 @@ export function ImageGallery({}) {
         {
             id: '1',
             source: require('../assets/galleryImages/mp.jpeg'),
-            title: 'Brown Field and Sky',
-            credit: 'Anonymous',
+            title: 'Margherita Pizza',
         },
         {
             id: '2',
             source: require('../assets/galleryImages/sp.jpg'),
-            title: 'Red Roses',
-            credit: 'Artem Saranin'
+            title: 'Sashimi Sushi',
         },
         {
             id: '3',
             source: require('../assets/galleryImages/cb.jpg'),
-            title: 'Green Leaf',
-            credit: 'Min An'
+            title: 'Cheeseburgers',
         },
         {
             id: '4',
             source: require('../assets/galleryImages/spaghetti-carbonara.jpg'),
-            title: 'Green Leafed Trees During Fog Time',
-            credit: 'Lum3n'
+            title: 'Spaghetti Carbonara',
         },
         {
             id: '5',
             source: require('../assets/galleryImages/chocolate-lava-cake.jpg'),
-            title: 'Green Leafed Trees During Fog Time',
-            credit: 'Lum3n'
+            title: 'Lava Cake',
         },
 
     ];
@@ -57,7 +52,6 @@ export function ImageGallery({}) {
                             />
                         </View>
                         <Text style={[styles.text, styles.title]}>{image.title}</Text>
-                        <Text style={[styles.text, styles.credit]}>{image.credit}</Text>
                     </View>
                 ))}
             </ScrollView>
@@ -94,10 +88,6 @@ const styles = StyleSheet.create({
     title: {
         marginTop: 16,
         fontSize: 16,
-    },
-    credit: {
-        marginTop: 8,
-        fontSize: 12,
     },
     instructions: {
         marginTop: 20,
