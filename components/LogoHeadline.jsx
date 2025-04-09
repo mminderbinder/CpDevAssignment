@@ -3,7 +3,6 @@ import React from "react";
 
 export function LogoHeadline({
                                  headline = "Welcome",
-                                 subHeading = "Components Tour",
                              }) {
     return (
         <View style={styles.container}>
@@ -14,7 +13,6 @@ export function LogoHeadline({
                     resizeMode="cover"/>
             </View>
             <Text style={styles.headline}>{headline}</Text>
-            <Text style={styles.subHeading}>{subHeading}</Text>
         </View>
     );
 }
@@ -27,8 +25,8 @@ const styles = StyleSheet.create({
     },
 
     logoContainer: {
-        width: 120,
-        height: 120,
+        width: 150,
+        height: 150,
         borderRadius: 60,
         overflow: 'hidden',
         marginBottom: 20,
@@ -49,8 +47,4 @@ const styles = StyleSheet.create({
         marginBottom: 8,
         textAlign: 'center',
     },
-    subHeading: {
-        fontSize: 20,
-        textAlign: 'center',
-    }
 })
