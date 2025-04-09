@@ -7,21 +7,19 @@ import {LogoHeadline} from "../components/LogoHeadline";
 const {width} = Dimensions.get("window");
 const buttonWidth = width * 0.8;
 
-type RootStackParamsList = {
+type LandingStackParamsList = {
     Landing: undefined;
     Login: undefined;
     SignUp: undefined
-    MainApp: undefined;
 }
 
 type LandingPageProps = {
-    navigation: StackNavigationProp<RootStackParamsList, 'Landing'>;
+    navigation: StackNavigationProp<LandingStackParamsList, 'Landing'>;
 };
 
 export default function LandingScreen({ navigation }: LandingPageProps) {
     return (
         <SafeAreaView style={styles.container}>
-            <View style={styles.content}>
                 <View style={styles.topContainer}>
                     <LogoHeadline headline="Welcome" />
                     <Text style={styles.subtitle}>Assignment 2</Text>
@@ -38,7 +36,6 @@ export default function LandingScreen({ navigation }: LandingPageProps) {
                         <Text style={styles.buttonText}>Sign Up</Text>
                     </TouchableOpacity>
                 </View>
-            </View>
         </SafeAreaView>
     )
 }
@@ -46,12 +43,10 @@ export default function LandingScreen({ navigation }: LandingPageProps) {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-    },
-    content: {
-        flex: 1,
-       justifyContent: 'space-evenly',
+        justifyContent: 'space-evenly',
         alignItems: 'center',
         padding: 16,
+        backgroundColor: '#f9f9f9',
     },
     topContainer: {
         flex: 1,
@@ -60,16 +55,10 @@ const styles = StyleSheet.create({
         width: '100%',
     },
     bottomContainer: {
-        flex: 2,
+        flex: 1,
         justifyContent: 'space-evenly',
-        alignItems:'center',
+        alignItems: 'center',
         width: '100%',
-    },
-    title: {
-        fontSize: 32,
-        fontWeight: 'bold',
-        marginBottom: 10,
-        textAlign: 'center',
     },
     subtitle: {
         fontSize: 16,

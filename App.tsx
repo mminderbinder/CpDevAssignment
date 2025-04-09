@@ -44,7 +44,6 @@ function TabNavigator() {
                     tabBarStyle: {backgroundColor: '#fff'},
                     tabBarIcon: ({color, size}) => {
                         let iconName: string = '';
-
                         switch (route.name) {
                             case 'Home':
                                 iconName = 'home';
@@ -67,13 +66,11 @@ function TabNavigator() {
                             default:
                                 iconName = 'help-circle';
                         }
-
                         return (
                             <MaterialCommunityIcons
                                 name={iconName as keyof typeof MaterialCommunityIcons.glyphMap}
                                 size={size}
-                                color={color}
-                            />
+                                color={color}/>
                         );
                     },
                 })}>
