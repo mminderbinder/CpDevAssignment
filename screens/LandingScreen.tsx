@@ -1,41 +1,31 @@
 import React from 'react';
-import {View, Text, StyleSheet, TouchableOpacity, Dimensions} from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import {View, Text, StyleSheet} from 'react-native';
+import {SafeAreaView} from 'react-native-safe-area-context';
 import {StackNavigationProp} from "@react-navigation/stack";
+import {ActionButton} from "../components/ActionButton";
 import {LogoHeadline} from "../components/LogoHeadline";
 
-const {width} = Dimensions.get("window");
-const buttonWidth = width * 0.8;
-
-type LandingStackParamsList = {
+type RootStackParamList = {
     Landing: undefined;
     Login: undefined;
     SignUp: undefined
 }
 
 type LandingPageProps = {
-    navigation: StackNavigationProp<LandingStackParamsList, 'Landing'>;
+    navigation: StackNavigationProp<RootStackParamList, 'Landing'>;
 };
 
-export default function LandingScreen({ navigation }: LandingPageProps) {
+export default function LandingScreen({navigation}: LandingPageProps) {
     return (
         <SafeAreaView style={styles.container}>
-                <View style={styles.topContainer}>
-                    <LogoHeadline headline="Welcome" />
-                    <Text style={styles.subtitle}>Assignment 2</Text>
-                </View>
-                <View style={styles.bottomContainer}>
-                    <TouchableOpacity
-                        style={styles.button}
-                        onPress={() => navigation.navigate('Login')}>
-                        <Text style={styles.buttonText}>Login</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity
-                        style={styles.button}
-                        onPress={() => navigation.navigate('SignUp')}>
-                        <Text style={styles.buttonText}>Sign Up</Text>
-                    </TouchableOpacity>
-                </View>
+            <View style={styles.topContainer}>
+                <LogoHeadline headline="Welcome"/>
+                <Text style={styles.subtitle}>Assignment 2</Text>
+            </View>
+            <View style={styles.bottomContainer}>
+                <ActionButton title={"Login"} onPress={() => navigation.navigate('Login')}/>
+                <ActionButton title={"Sign Up"} onPress={() => navigation.navigate('SignUp')}/>
+            </View>
         </SafeAreaView>
     )
 }
@@ -43,9 +33,6 @@ export default function LandingScreen({ navigation }: LandingPageProps) {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'space-evenly',
-        alignItems: 'center',
-        padding: 16,
         backgroundColor: '#f9f9f9',
     },
     topContainer: {
@@ -64,18 +51,5 @@ const styles = StyleSheet.create({
         fontSize: 16,
         textAlign: 'center',
         marginBottom: 40,
-    },
-    button: {
-        backgroundColor: '#ff9800',
-        paddingVertical: 12,
-        paddingHorizontal: 40,
-        borderRadius: 16,
-        alignItems: 'center',
-        width: buttonWidth
-    },
-    buttonText: {
-        color: 'white',
-        fontSize: 18,
-        fontWeight: 'bold',
     },
 });

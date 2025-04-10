@@ -7,7 +7,7 @@ import {GroupMembersList} from '../components/GroupMembersList';
 export default function HomeScreen() {
     return (
         <SafeAreaView style={styles.container} edges={['left', 'right']}>
-            <LogoHeadline/>
+            <LogoHeadline headline="Home"/>
             <GroupMembersList/>
             <View style={styles.bottomSpacer}/>
         </SafeAreaView>
