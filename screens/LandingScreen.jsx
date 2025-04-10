@@ -1,21 +1,10 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
-import {StackNavigationProp} from "@react-navigation/stack";
 import {ActionButton} from "../components/ActionButton";
 import {LogoHeadline} from "../components/LogoHeadline";
 
-type RootStackParamList = {
-    Landing: undefined;
-    Login: undefined;
-    SignUp: undefined
-}
-
-type LandingPageProps = {
-    navigation: StackNavigationProp<RootStackParamList, 'Landing'>;
-};
-
-export default function LandingScreen({navigation}: LandingPageProps) {
+export default function LandingScreen({navigation}) {
     return (
         <SafeAreaView style={styles.container}>
             <View style={styles.topContainer}>
