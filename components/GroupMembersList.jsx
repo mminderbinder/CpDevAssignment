@@ -23,8 +23,7 @@ export function GroupMembersList() {
                 data={members}
                 renderItem={renderItem}
                 keyExtractor={item => item.id}
-                style={styles.list}
-            />
+                style={styles.list}/>
         </View>
     );
 }

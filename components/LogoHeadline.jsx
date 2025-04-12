@@ -1,9 +1,7 @@
 import {StyleSheet, Text, Image, View} from 'react-native';
 import React from "react";
 
-export function LogoHeadline({
-                                 headline = "",
-                             }) {
+export function LogoHeadline({headline = "",}) {
     return (
         <View style={styles.container}>
             <View style={styles.logoContainer}>

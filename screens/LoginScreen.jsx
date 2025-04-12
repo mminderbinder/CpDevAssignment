@@ -13,7 +13,7 @@ export const users = [
 export default function LoginScreen({navigation}) {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-
+    
     const loginUser = () => {
         const user = users.find(user => user.email === email && user.password === password);
 
@@ -41,14 +41,12 @@ export default function LoginScreen({navigation}) {
                     value={email}
                     onChangeText={setEmail}
                     autoCapitalize="none"
-                    keyboardType="email-address"
-                />
+                    keyboardType="email-address"/>
                 <CustomTextInput
                     placeholder="Password"
                     value={password}
                     onChangeText={setPassword}
-                    secureTextEntry={true}
-                />
+                    secureTextEntry={true}/>
             </View>
             <View style={(styles.bottomContainer)}>
                 <ActionButton title={"Submit"} onPress={loginUser}/>

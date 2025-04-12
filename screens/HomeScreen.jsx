@@ -9,7 +9,6 @@ export default function HomeScreen() {
         <SafeAreaView style={styles.container} edges={['left', 'right']}>
             <LogoHeadline headline="Home"/>
             <GroupMembersList/>
-            <View style={styles.bottomSpacer}/>
         </SafeAreaView>
     );
 }
@@ -19,8 +18,5 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         backgroundColor: '#f4f4f4',
-    },
-    bottomSpacer: {
-        height: Platform.OS === 'ios' ? 70 : 40,
     }
 });
