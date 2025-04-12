@@ -2,7 +2,16 @@ import React from 'react';
 import {View, Text, Image, StyleSheet, TouchableOpacity} from 'react-native';
 import {Ionicons} from '@expo/vector-icons';
 
-export default function ProfileScreen() {
+export default function ProfileScreen({navigation}) {
+
+    const handleLogout = () => {
+
+        navigation.reset({
+            index: 0,
+            routes: [{name: 'Landing'}]
+        });
+    };
+
     return (
         <View style={styles.container}>
             {/* Profile Picture */}
@@ -35,7 +44,7 @@ export default function ProfileScreen() {
             </TouchableOpacity>
 
             {/* Logout Button */}
-            <TouchableOpacity style={styles.logoutButton}>
+            <TouchableOpacity style={styles.logoutButton} onPress={handleLogout}>
                 <Text style={styles.logoutText}>Logout</Text>
             </TouchableOpacity>
         </View>
