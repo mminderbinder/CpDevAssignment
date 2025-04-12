@@ -10,6 +10,17 @@ export default function SignUpScreen({navigation}) {
     const [password, setPassword] = useState("");
 
     const signUpUser = () => {
+
+        if (!email || email.trim() === "") {
+            Alert.alert("Email Required", "Please enter your email address.");
+            return;
+        }
+
+        if (!password || password.trim() === "") {
+            Alert.alert("Password Required", "Please enter a password.");
+            return;
+        }
+
         users.push({email, password});
 
         Alert.alert("Account created", `Welcome, ${email}!`);
