@@ -2,7 +2,7 @@ import React from 'react';
 import {View, Text, StyleSheet, FlatList} from 'react-native';
 
 export function GroupMembersList() {
-    const members = [
+    const MEMBERS = [
         {id: '1', name: 'Deep Limbachiya', studentNumber: '200626971'},
         {id: '2', name: 'Zinkal Navadiya', studentNumber: '200631095'},
         {id: '3', name: 'Shawn Perron', studentNumber: '200604248'},
@@ -20,7 +20,7 @@ export function GroupMembersList() {
         <View style={styles.container}>
             <Text style={styles.title}>Group Members</Text>
             <FlatList
-                data={members}
+                data={MEMBERS}
                 renderItem={renderItem}
                 keyExtractor={item => item.id}
                 style={styles.list}/>

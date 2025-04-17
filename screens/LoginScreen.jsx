@@ -50,7 +50,7 @@ export default function LoginScreen({navigation}) {
             </View>
             <View style={(styles.bottomContainer)}>
                 <ActionButton title={"Submit"} onPress={loginUser}/>
-                <ActionButton title={"Back"} onPress={() => navigation.navigate('Landing')}/>
+                <ActionButton title={"Back"} onPress={() => navigation.reset({index: 0, routes: [{name: 'Landing'}]})}/>
             </View>
         </SafeAreaView>
     );
