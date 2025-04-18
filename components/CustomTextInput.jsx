@@ -3,11 +3,8 @@ import {TextInput, StyleSheet} from "react-native";
 
 export function CustomTextInput(props) {
     return (
-        <TextInput
-            style={styles.input}
-            {...props}>
-            {props.children}
-        </TextInput>
+        <TextInput style={styles.input}
+            {...props}/>
     );
 }
 

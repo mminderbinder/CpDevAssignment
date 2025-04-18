@@ -38,6 +38,7 @@ export function ImageGallery({}) {
         <View style={styles.container}>
             <ScrollView
                 horizontal
+                alwaysBounceHorizontal={true}
                 pagingEnabled
                 showsHorizontalScrollIndicator={false}
                 snapToInterval={width}
